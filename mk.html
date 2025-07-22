@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Alkhwarizmi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      direction: rtl;
+      background-color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الشريط العلوي */
+    .navbar {
+      background-color: #6ab1f7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      color: white;
+    }
+
+    .navbar nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    .navbar .search {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .navbar .search input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    /* قائمة الدورات */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background-color: rgb(153, 199, 242);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      min-width: 180px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #0a3f87;
+      font-weight: bold;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* البانر */
+    .banner {
+      background: url('c:/Users/STARS/Desktop/Project1/photo_2025-07-20_14-24-01.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 30px;
+      color: white;
+      position: relative;
+    }
+
+    .banner-content {
+      max-width: 600px;
+    }
+
+    .banner h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .banner .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .banner .buttons a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #0a3f87;
+      color: white;
+    }
+
+    .btn-light {
+      background-color: white;
+      color: #0a3f87;
+      border: 1px solid #0a3f87;
+    }
+
+    /* الفوتر */
+    .footer {
+      width: 100%;
+      background-color: #113BCE;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px 100px;
+      box-sizing: border-box;
+      color: white;
+      gap: 40px;
+    }
+
+    .footer-section {
+      flex: 1;
+      font-size: 15px;
+    }
+
+    .footer-section.right {
+      text-align: right;
+      line-height: 2;
+    }
+
+    .footer-section.center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: right;
+    }
+
+    .footer-section.center img {
+      width: 130px;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-section.left {
+      text-align: left;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<div class="navbar">
+  <div class="logo">
+    <img src="c:/Users/STARS/Desktop/Project1/تصميم بدون عنوان.png" style="opacity: 0.6;" alt="شعار">
+  </div>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">الخدمات</a>
+    <a href="#">الفروع</a>
+
+    <!-- قائمة الدورات -->
+    <div class="dropdown">
+      <a href="javascript:void(0);" onclick="toggleDropdown()">الدورات</a>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="#">الشهادات الاحترافية</a>
+        <a href="#">البرامج و الدبلومات</a>
+        <a href="#">الحاسب الآلي</a>
+        <a href="#">اللغة الإنجليزية</a>
+      </div>
+    </div>
+
+    <a href="#">الدفع</a>
+  </nav>
+  <div class="search">
+    <input type="text" placeholder="بحث">
+    <img src="https://via.placeholder.com/100x40?text=شعار" alt="شعار">
+  </div>
+</div>
+
+<!-- البانر -->
+<div class="banner">
+  <div class="banner-content">
+    <h2>عن إنماء</h2>
+    <p>سعينا الدائم هو تزويد مستخدمينا بأدوات ذكية ترفع من كفاءة الإنجاز، وتعزز تجربة الاستخدام نحو نتائج دقيقة وسهلة محققة.</p>
+    <div class="buttons">
+      <a href="#" class="btn-light">تحميل التطبيق</a>
+      <a href="#" class="btn-primary">دخول المستخدم</a>
+    </div>
+  </div>
+</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة التدريب</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: #eaf3fc;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .section > div {
+      flex: 1;
+    }
+    .section .steps {
+      margin-right: 20px;
+    }
+    .steps h3, .info h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      margin-left: 10px;
+    }
+    .info {
+      text-align: right;
+    }
+    .info p {
+      margin-bottom: 15px;
+    }
+    .partners {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .partners h3 {
+      margin-bottom: 15px;
+    }
+    .partners img {
+      max-height: 50px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    .branches {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+ <div class="textbox">
+  <h3>شرح الفائدة الرئيسية لتطبيقنا</h3>
+  <ul><li>
+يساعدك موقعنا على عرض الدورات التدريبية المتاحة في معهد الخوارزمي للتدريب، مما يسهل عليك اختيار الدورة المناسبة لك.
+  </li>
+    <li>
+الحصول على الشهادات الاحترافية المطلوبة للوظائف و الاغرااض الاخرى .
+    </li>
+        <li>
+            التسجيل للسنوات الاكاديمية لتخصصات مختلفة (لمدة عامين ونصف )
+        </li>
+  </ul>
+  <div class="image">
+<input type="image" name="contact" src="3.jpg"  id="img3" width="70" height="70" >
+
+<input type="image" name="order" src="2.jpg" id="img2" width="70" height="70" >
+
+<input type="image" name="contact" src="1.jpg"  id="img1" width="70" height="70" >
+       </div>
+</div>
+  </body>
+
+<body>
+  <div class="container">
+    <div class="section">
+      <div class="steps">
+        <h3>3 خطوات للتدرب معنا</h3>
+        <div class="step">
+          <div class="step-number">1</div>
+          <p>سجل معنا<br>سجل بياناتك المطلوبة وتأكد منها للحصول على شهادتك بالشكل الصحيح</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <p>اختر الدورة التدريبية<br>اختر الدورات التي تناسبك حيث تعتبر دوراتنا من أقوى الدورات في عالم التوظيف والتقنية</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <p>احصل على الشهادة<br>احصل على شهاداتك التدريبية فور انتهاء الدورة معتمدة من الجهات الرسمية ومفيدة في التوظيف والترقيات</p>
+        </div>
+      </div>
+      <div class="info">
+        <h3>لماذا هذه الدورات؟</h3>
+        <p>تعد الدورات التدريبية من الركائز الأساسية لتطوير الفرد في مسيرته المهنية فهي لا تقتصر على تعزيز المعرفة النظرية، بل تفتح آفاقًا جديدة للتطبيق العملي، وتمنح الموظف أدوات حديثة لمواكبة التغيرات المتسارعة في سوق العمل.</p>
+        <p>من خلال الدورات يستطيع الفرد تنمية مهاراته، سواء كانت تقنية، إدارية، أو تواصلية، مما يرفع من كفاءته وإنتاجيته.</p>
+      </div>
+    </div>
+</body>
+
+<!-- الفوتر -->
+<head>
+  <meta charset="UTF-8">
+  <title>فوتر</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background-color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .main-content {
+      padding: 100px 30px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .footer {
+      width: 100%;
+      background-color: #113BCE;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px 100px;
+      box-sizing: border-box;
+      color: white;
+      gap: 40px;
+      position: relative;
+    }
+
+    .footer-section {
+      flex: 1;
+      font-size: 15px;
+    }
+
+    .footer-section.right {
+      text-align: right;
+      line-height: 2;
+    }
+
+    .footer-section.center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section.center img {
+      width: 130px;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-section.left {
+      text-align: left;
+      line-height: 2;
+    }
+
+    .footer-section.right h4 {
+      transform: translateX(-30px);
+    }
+
+    .footer-section.left h4 {
+      transform: translateX(30px);
+    }
+
+
+    .footer-bottom {
+      background-color: #113BCE;
+      color: white;
+      font-size: 12px;
+      padding: 10px 20px;
+      text-align: right;
+      direction: rtl;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-content">
+
+  </div>
+
+
+  <div class="footer">
+
+    <div class="footer-section right">
+      <h4>أوقات الدوام الرسمية</h4>
+
+      <div style="display: flex; justify-content: space-between;">
+        <span>⏰ الأحد - الأربعاء</span>
+        <span>8-12م   4-10م</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between;">
+        <span>⏰ الخميس</span>
+        <span>8-12م   4-8م</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between;">
+        <span>⏰ الجمعة</span>
+        <span>مغلق</span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between;">
+        <span>⏰ السبت</span>
+        <span>مغلق</span>
+      </div>
+    </div>
+
+
+    <div class="footer-section center">
+      <h4>طرق الدفع المتاحة</h4>
+      <img src="C:\Users\Albandari\Desktop\التدريب\6024073103501544200_120.jpg" alt="طرق الدفع">
+    </div>
+
+
+    <div class="footer-section left">
+      <h4>تواصل معنا</h4>
+      <p>📧 info@alkhwarzmi.com</p>
+      <p>📱 0544460046</p>
+      <p>📞 0127480004</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <div>
+    © 2025 جميع الحقوق محفوظة لدى
+    <a href="https://alkhwarzmi.com" target="_blank" style="color: white; text-decoration: underline;">
+      معهد الخوارزمي للتدريب
+    </a>.
+  </div>
+  <div>
+    <a href="https://laser-ksa.com" target="_blank" style="color: white; text-decoration: underline;">
+      laser-ksa.com
+    </a>
+  </div>
+</div>
+
+
+</body>
+
+<!-- سكربت القائمة المنسدلة -->
+<script>
+  function toggleDropdown() {
+    var menu = document.getElementById("dropdownMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  }
+
+  document.addEventListener("click", function (event) {
+    var dropdown = document.querySelector(".dropdown");
+    if (!dropdown.contains(event.target)) {
+      document.getElementById("dropdownMenu").style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
