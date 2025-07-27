@@ -204,7 +204,7 @@
 
   /* تنسيقات قسم "شرح الفائدة ال
 
-A ., [02/02/47 10:25 ص]
+A ., [02/02/47 11:17 ص]
 رئيسية" */
   .textbox {
    padding: 20px;
@@ -241,7 +241,7 @@ A ., [02/02/47 10:25 ص]
   .textbox .image {
    display: flex; /* لترتيب الصور بجانب بعضها */
    gap: 40px; /* مسافة بين الصور */
-   justify-content: center; /* توسيط الصور أفقياً */
+   justify-content: flex-start; /* تم التعديل هنا: دفع الصور إلى اليمين في RTL */
    margin-top: 20px;
   }
   .textbox .image img { /* استخدام عنصر img لعرض الصور */
@@ -347,15 +347,11 @@ A ., [02/02/47 10:25 ص]
    text-align: center;
   }
 
-  .image {
-   max-width: 70px;
-   height: auto;
-  }
-
   .partners-map-section h2 {
-   font-size: 20px;
+   font-size: 35px;
    margin-bottom: 30px;
-   color: #622d0a;
+   color: #0b0501;
+   font-family: sans-serif;
   }
 
   .partners {
@@ -395,13 +391,12 @@ A ., [02/02/47 10:25 ص]
 
  <div class="navbar">
   <div class="logo">
-   <img src="https://i.postimg.cc/CxwyQ0mp/5778526705042966733-120.jpg" style="opacity: 0.6;" alt="شع
-
-A ., [02/02/47 10:25 ص]
-ار">
+   <img src="https://i.postimg.cc/CxwyQ0mp/5778526705042966733-120.jpg" style="opacity: 0.6;" alt="شعار">
   </div>
   <nav>
-   <a href="#">الرئيسية</a>
+
+
+<a href="#">الرئيسية</a>
    <a href="#">الخدمات</a>
    <a href="#">الفروع</a>
 
@@ -450,7 +445,7 @@ A ., [02/02/47 10:25 ص]
   <div class="image">
    <img src="https://i.postimg.cc/d1p4PRFT/5778526705042966722-121.jpg" alt="محتويات الشركات">
    <img src="https://i.postimg.cc/jqnM6166/5778526705042966724-120.jpg" alt="شكوى أو استفسارات">
-    <img src="https://i.postimg.cc/5NwpTFR6/5778526705042966723-121.jpg" alt="تواصل معنا">
+   <img src="https://i.postimg.cc/5NwpTFR6/5778526705042966723-121.jpg" alt="تواصل معنا">
   </div>
  </div>
  
@@ -486,10 +481,10 @@ A ., [02/02/47 10:25 ص]
   <div class="section-content">
    <h2>شركاء النجاح</h2>
    <div class="partners">
-    <img src="c:\Users\STARS\Desktop\Project1\de266c6e-4a28-446a-b16c-ab58022f3254 (1).webp" alt="Tabby" class="image"><span></span>
-    <img src="c:\Users\STARS\Desktop\Project1\K8yHJmJOdP7C9422tgs19TbdOemamBeMSwgxNI3G.svg" alt="منار" class="image"><span></span>
-    <img src="c:\Users\STARS\Desktop\Project1\svg.svg" alt="هدف" class="image"><span></span>
-    <img src="c:\Users\STARS\Desktop\Project1\Logo_footer.png" alt="شمس" class="image"><span></span>
+    <img src="https://i.postimg.cc/Sx7Gg2Kk/image.png" alt="Tabby" class="image">
+    <img src="https://i.postimg.cc/NfRVw00P/image.jpg" alt="منار" class="image">
+    <img src="https://i.postimg.cc/CxzqqRfc/images.jpg" alt="هدف" class="image">
+    <img src="https://i.postimg.cc/RCJCKwP6/5778526705042966761-121-1.png" alt="منصة ماهر" class="image">
    </div>
   </div>
   <h2 class="branches-title"></h2>
@@ -509,14 +504,13 @@ A ., [02/02/47 10:25 ص]
  <div class="footer">
   <div class="footer-section right">
    <h4>أوقات الدوام الرسمية</h4>
-   <div style="display: flex; justify-content: space-be
-
-A ., [02/02/47 10:25 ص]
-tween;">
+   <div style="display: flex; justify-content: space-between;">
     <span>⏰ الأحد - الأربعاء</span>
     <span>8-12م  4-10م</span>
    </div>
-   <div style="display: flex; justify-content: space-between;">
+
+A ., [02/02/47 11:17 ص]
+<div style="display: flex; justify-content: space-between;">
     <span>⏰ الخميس</span>
     <span>8-12م  4-8م</span>
    </div>
@@ -547,12 +541,12 @@ tween;">
   <div>
    © 2025 جميع الحقوق محفوظة لدى
    <a href="https://alkhwarzmi.com" target="_blank" style="color: white; text-decoration: underline;">
-    معهد الخوارزمي للتدريب
+   معهد الخوارزمي للتدريب
    </a>.
   </div>
   <div>
    <a href="https://laser-ksa.com" target="_blank" style="color: white; text-decoration: underline;">
-    laser-ksa.com
+   laser-ksa.com
    </a>
   </div>
  </div>
