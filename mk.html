@@ -13,10 +13,8 @@
    min-height: 100vh;
    display: flex;
    flex-direction: column;
-   color: #0d0d8a; /* تغيير اللون الافتراضي للنصوص إلى الأزرق الداكن الموحد */
-  }
+   color: #0d0d8a;
 
-  /* الشريط العلوي */
   .navbar {
    background-color: #6ab1f7;
    display: flex;
@@ -50,7 +48,6 @@
    border: none;
   }
 
-  /* قائمة الدورات */
   .dropdown {
    position: relative;
    display: inline-block;
@@ -80,7 +77,6 @@
    background-color: #c3cdd9;
   }
 
-  /* البانر */
   .banner {
    background: url('https://i.postimg.cc/8P1rkJCF/5778526705042966728-121.jpg') no-repeat center center;
    background-size: cover;
@@ -126,19 +122,19 @@
    border: 1px solid #012961;
   }
 
-  /* بداية تنسيقات صفحة التدريب (لضمان عملها بشكل جيد مع باقي الصفحة) */
-  .content-section { /* تم تغيير اسم الكلاس لتجنب التضارب */
+  
+  .content-section { 
    font-family: Arial, sans-serif;
    background-color: #e3eff8;
    line-height: 1.8;
-   padding-bottom: 20px; /* إضافة مسافة سفلية قبل القسم التالي */
+   padding-bottom: 20px;
   }
   .container {
    max-width: 1200px;
    margin: 0 auto;
    padding: 20px;
   }
-  .section-training { /* تم تغيير اسم الكلاس لتجنب التضارب */
+  .section-training {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
@@ -153,10 +149,10 @@
   .section-training .steps {
    margin-right: 20px;
   }
-  .steps h3, .info-training h3 { /* تم تعديل الكلاس هنا */
+  .steps h3, .info-training h3 { 
    font-size: 1.5em;
    margin-bottom: 15px;
-   color: black; /* لون أسود لعناوين "لماذا هذه الدورات؟" و "3 خطوات للتدرب معنا" */
+   color: black; 
   }
   .step {
    display: flex;
@@ -174,16 +170,16 @@
    align-items: center;
    font-size: 1.2em;
    margin-left: 10px;
-   color: black; /* لون أسود لأرقام الخطوات */
+   color: black;
   }
-  .info-training { /* تم تغيير اسم الكلاس لتجنب التضارب */
+  .info-training { 
    text-align: right;
   }
   .info-training p {
    margin-bottom: 15px;
-   color: #0d0d8a; /* لون أزرق موحد */
+   color: #0d0d8a; 
   }
-  .partners-section { /* تم تغيير اسم الكلاس لتجنب التضارب */
+  .partners-section { 
    text-align: center;
    margin-top: 20px;
   }
@@ -200,17 +196,12 @@
    font-size: 1.5em;
    margin-top: 20px;
   }
-  /* نهاية تنسيقات صفحة التدريب */
-
-  /* تنسيقات قسم "شرح الفائدة ال
-
-A ., [02/02/47 11:17 ص]
-رئيسية" */
+  
   .textbox {
    padding: 20px;
-   background-color:none; /* لون خلفية مختلف لتمييزه */
-   margin-left: auto; /* يدفع الصندوق لليمين */
-   margin-right: 20px; /* هامش من اليمين للمسافة */
+   background-color:none;
+   margin-left: auto; 
+   margin-right: 20px; 
    max-width: 1000px;
    border-radius: 10px;    }
   .textbox h3 {
@@ -222,50 +213,50 @@ A ., [02/02/47 11:17 ص]
    list-style: none;
    padding: 0;
    margin: 0;
-   text-align: right; /* محاذاة القائمة لليمين */
+   text-align: right; 
   }
   .textbox li {
    margin-bottom: 10px;
    padding-right: 20px;
    position: relative;
-   color: #0d0d8a; /* لون أزرق موحد */
+   color: #0d0d8a; 
   }
   .textbox li::before {
-   content: "•"; /* نقطة كعلامة قائمة */
-   color: #385e87; /* لون النقطة */
+   content: "•"; 
+   color: #385e87; 
    font-weight: bold;
    display: inline-block;
    width: 1em;
    margin-left: -1em;
   }
   .textbox .image {
-   display: flex; /* لترتيب الصور بجانب بعضها */
-   gap: 40px; /* مسافة بين الصور */
-   justify-content: flex-start; /* تم التعديل هنا: دفع الصور إلى اليمين في RTL */
+   display: flex; 
+   gap: 40px; 
+   justify-content: flex-start; 
    margin-top: 20px;
   }
-  .textbox .image img { /* استخدام عنصر img لعرض الصور */
-   border-radius: 5px; /* لجعل الصور تبدو أفضل */
-   border: none; /* إزالة الحدود */
-   box-shadow: none; /* إزالة الظل الأسود */
+  .textbox .image img { 
+   border-radius: 5px;
+   border: none; 
+   box-shadow: none; 
    width: 70px;
    height: 70px;
-   object-fit: contain; /* للحفاظ على أبعاد الصورة داخل الحاوية */
+   object-fit: contain; 
   }
 
-  /* تنسيقات قسم "لماذا هذه الدورات؟" (تم دمجها مع التنسيقات العامة) */
-  .section-why-courses { /* تم تغيير اسم الكلاس */
-   background-color: #eaf3fc; /* لون الخلفية السماوي يغطي الصفحة بأكملها */
+  
+  .section-why-courses { 
+   background-color: #eaf3fc;
    padding: 20px;
   }
   .section-why-courses .info {
    margin-left: 20px;
   }
   .section-why-courses .info p {
-   color: #0d0d8a; /* لون أزرق موحد */
+   color: #0d0d8a; 
   }
 
-  /* الفوتر */
+ 
   .footer {
    width: 100%;
    background-color: #113BCE;
@@ -278,8 +269,8 @@ A ., [02/02/47 11:17 ص]
    box-sizing: border-box;
    color: white;
    gap: 40px;
-   /* position: relative; تم إزالة هذه الخاصية */
-   margin-top: auto; /* يدفع الفوتر للأسفل في صفحة flex-column */
+   
+   margin-top: auto; 
   }
 
   .footer-section {
@@ -326,13 +317,13 @@ A ., [02/02/47 11:17 ص]
    text-align: right;
    direction: rtl;
    border-top: 1px solid rgba(255, 255, 255, 0.4);
-   display: flex; /* لترتيب العناصر بشكل أفقي */
-   justify-content: space-between; /* لتباعد العناصر */
+   display: flex; 
+   justify-content: space-between; 
    align-items: center;
-   flex-wrap: wrap; /* للسماح بالعناصر بالنزول لسطر جديد على الشاشات الصغيرة */
+   flex-wrap: wrap; 
   }
 
-  /* قسم شركاء النجاح والخريطة */
+  
   .partners-map-section {
    font-family: 'Tahoma', sans-serif;
    margin: 0;
@@ -342,7 +333,7 @@ A ., [02/02/47 11:17 ص]
    text-align: right;
   }
 
-  .partners-map-section .section-content { /* تم إضافة هذا الكلاس لتنسيق محتوى القسم */
+  .partners-map-section .section-content { 
    padding: 40px 20px;
    text-align: center;
   }
@@ -566,3 +557,4 @@ A ., [02/02/47 11:17 ص]
 
 </body>
 </html>
+
